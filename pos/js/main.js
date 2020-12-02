@@ -1,6 +1,8 @@
 /*global $, document*/
 /*jslint plusplus : true, evil : true*/
 
+
+
 $(document).ready(function () {
     'use strict';
     $('.owl-carousel').owlCarousel({
@@ -9,7 +11,7 @@ $(document).ready(function () {
         dots: false,
         responsive: {
             0: {
-                items: 2
+                items: 3
             },
             576: {
                 items: 4
@@ -27,7 +29,7 @@ $(document).ready(function () {
         
         $(".meals .col").fadeOut();
         
-        $("*").removeClass("active-card")
+        $("*").removeClass("active-card");
         
         $(this).parent().addClass("active-card");
     });
@@ -51,5 +53,71 @@ $(document).ready(function () {
         
         $(".meals .3").fadeIn();
     });
+    $(".type-of-meal .4 a").on("click", function () {
+        
+        $(".meals .4").fadeIn();
+    });
     
 });
+
+
+// pure javascript functions
+
+
+
+
+
+//
+//function fullname(first, last) {
+//    return first + last
+//}
+//
+//function sum( num1, num2) {
+//    return num1 + num2
+//}
+
+
+function getMeal(name, price, image) {
+    
+    'use strict';
+    
+    let item = `<div class="card mb-3 mt-3">
+                    <div class="row no-gutters">
+                        <div class="col-lg-4">
+                            <img src=${image} class="card-img" alt="...">
+                        </div>
+                        <div class="col-lg-5 col-6">
+                            <div class="card-body">
+                                <p class="card-text"><span class="amount">1X</span> ${name}</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-4">
+                            <div class="card-body text-right">
+                                <p class="card-text"><small class="text-muted">&#36;${price}</small></p>
+                            </div>
+                        </div>
+                        <div class="col-lg col-2">
+                            <div class="card-body text-right mr-1">
+                                <button class="close" type="button">x</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>`;
+    
+    document.getElementById("orders").innerHTML += item;
+    
+    let total = document.getElementById("total").innerText;
+    
+    document.getElementById("total").innerHTML = Number(total) + Number(price)
+}
+
+
+
+
+
+
+
+
+
+
+

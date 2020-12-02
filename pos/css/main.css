@@ -16,11 +16,10 @@ body {
     height: 100vh;
     background-image: -webkit-linear-gradient( #fcd561 0%, #f6c357 100%);
     background-image: linear-gradient( #fcd561 0%, #f6c357 100%);
-    border-radius: 10px;
     position: relative;
     z-index: 1
 }
-.total .dico1{
+.total .dicoration1{
     width: 1%;
     height: 7%;
     background-color: #fff;
@@ -29,27 +28,27 @@ body {
     top: 20%;
     border-radius: 5px 10px 10px 5px
 }
-.total .dico2{
-    width: 1.5%;
-    height: 2.5%;
+.total .dicoration2{
+    width: 1%;
+    height: 2%;
     position: absolute;
     top: 75%;
-    left: 3%;
+    left: .75%;
     border-radius: 7px;
     background-color: #fb6d3a;
     z-index: 2;
 }
-.total .dico3{
-    width: 1.5%;
-    height: 2.5%;
+.total .dicoration3{
+    width: 1%;
+    height: 2%;
     position: absolute;
     z-index: 2;
     top: 25%;
-    left: 96%;
+    left: 98%;
     border-radius: 7px;
     background-color: #503e9d;
 }
-.total .dico4{
+.total .dicoration4{
     position: rtl;
     width: 1.5%;
     height: 10%;
@@ -61,57 +60,33 @@ body {
     border-radius: 10px 0px 0px 10px
 }
 .total .cont{
-    width: 90%;
-    height: 90%;
+    width: 95%;
+    height: 95%;
     background-color: #fff;
     position: absolute;
-    /*top: 52px;*/
-    /*left: 85px;*/
+    top: 2.5%;
+    left: 2.5%;
     border-radius: 30px;
-    margin: 30px 0px 0px 60px
 }
-@media (max-width: 992px){
-    .total .cont{
-        margin: 30px 0px 0px 50px;
-    } 
-}
-@media (max-width: 768px){
-    .total .cont{
-        margin: 30px 0px 0px 27px;
-    } 
-}
-@media (max-width: 576px){
-    .total .cont{
-        margin: 30px 0px 0px 27px;
-    } 
-}
-.total .cont article{
+
+.total .cont main{
     float: left;
     width: 75%;
     height: 100%;
     border-radius: 0px 20px 20px 0px;
-    padding: 30px 60px;
+    /*padding: 30px 60px;*/
     overflow: hidden
 }
-.total .cont article .navbar {
+.total .cont main .navbar {
     justify-content: initial;
-    flex-wrap: nowrap;
     padding: 0px
 }
-.total .cont nav .first button{
+.total .cont nav .menu button{
     flex-basis: 35px;
     background-color: #fff;
     border: none;
     margin-right: 10px;
     margin-bottom: 5px
-}
-.total .cont nav .head{
-    display: flex;
-    flex-basis: 200px
-}
-.total .cont nav form{
-    display: flex;
-    flex-grow: 1
 }
 .total .cont nav form .btn-outline-success{
     border: none;
@@ -128,7 +103,6 @@ body {
     background-color: #fafaf9;
     border-color: #fafaf9
 }
-
 .total .cont nav form .form-control{
     background-color: #fafaf9;
     border: none;
@@ -138,17 +112,11 @@ body {
 
 /*start restaurant*/
 
-.total .restaurant{
-    margin-top: 30px;
-    margin-bottom: 100px
-}
 .total .restaurant h2{
     display: inline-block;
-    float: left
 }
 .total .restaurant form {
     display: inline-block;
-    float: right;
     background-color: #fb6d3a;
     color: #fff;
     padding: 10px 15px;
@@ -157,19 +125,19 @@ body {
 }
 .total .restaurant form span{
     margin-right: 5px;
-    margin-left: 5px
+    margin-left: 5px;
 }
 .total .restaurant form select{
     background-color: #fb6d3a;
     color: #fff;
-    border: none
+    border: none;
 }
 .total .restaurant form select:active{
-    border: none
+    border: none;
 }
 
 /*end restaurant*/
-/*start type of male*/
+/*start type of meal*/
 
 .total .type-of-meal{
     padding-bottom: 20px
@@ -218,15 +186,18 @@ body {
     display: none
 }
 
+/*end type of meal*/
+
 /*start meals*/
+
 .meals{
     height: 50%;
     overflow-y: scroll;
-    overflow-x: hidden
+    overflow-x: hidden;
 }
 .meals::-webkit-scrollbar{
     width: 5px;
-    background: transparent
+    background: transparent;
 }
 .meals::-webkit-scrollbar-thumb{
     border-radius: 10px;
@@ -234,42 +205,40 @@ body {
 }
 @media (min-width: 768px){
     .meals .card img{
-        height: 130px
+        height: 130px;
     }
 }
 .meals .card{
-    border: none
+    border: none;
 }
 .meals .card img{
-    border-radius: 10px
+    border-radius: 10px;
 }
 .meals .card-body{
     padding: 0;
     padding-top: 20px;
-    margin-bottom: 30px
+    margin-bottom: 30px;
 }
 .meals .card .card-img-overlay{
-    padding: 0
+    padding: 0;
 }
 .meals .card .card-img-overlay span{
     background: #fff;
     padding: 10px;
     border-radius: 10px 0;
-    opacity: .9
+    opacity: .9;
 }
 /*end meals*/
 
-
-
-.total aside{
+/*start aside*/
+aside{
     float: right;
     width: 25%;
     height: 100%;
     background-color: #fafaf9;
     border-radius: 0px 20px 20px 0px;
-    padding: 40px 30px
 }
-.total aside .customer span{
+aside .user span{
     background: #fcd561;
     color: #000;
     padding: 5px 10px;
@@ -278,35 +247,125 @@ body {
     font-weight: bold;
     margin-left: 10px;
 }
-.total aside .customer i{
-    font-size: 20px
+aside .user i{
+    font-size: 20px;
 }
-.total aside .detials-customer{
+aside .user-detial{
     background-color: #503e9d;
     border-radius: 10px;
-    padding: 20px;
     color: #fafaf9;
     font-size: 12px;
-    margin-top: 20px
+    margin-top: 15px;
+    overflow: hidden;
 }
-.total aside .detials-customer p{
-    padding: 0;
-    margin: 0
+aside .user-detial .adress{
+    margin-bottom: 20px;
 }
-.total aside .detials-customer .adress{
-    margin-bottom: 20px
-}
-.total aside .detials-customer a{
+aside .user-detial a{
     float: right;
     color: #fcd561;
 }
-.total aside .detials-customer a:hover{
-    text-decoration: none
+aside .user-detial a:hover{
+    text-decoration: none;
 }
-.total aside .detials-customer i{
+aside .user-detial i{
     color: #e5ae09;
     background: #6452b2;
     padding: 6px;
     border-radius: 4px;
-    margin-right: 10px
+    margin-right: 10px;
 }
+
+/*order*/
+
+aside .order{
+    max-height: 40%;
+    overflow-y: scroll;
+}
+aside .order .card{
+    background: transparent;
+    border: none;
+}
+aside .order .card-img{
+    border-radius: 10px;
+    height: 40px;
+    width: 60px;
+}
+aside .order .card-body{
+    padding: 0;
+}
+aside .order .card-body .card-text{
+    font-size: 12px;
+    padding-top: 10px;
+}
+.order::-webkit-scrollbar{
+    width: 5px;
+    background: transparent;
+}
+.order::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background: #eee;
+}
+aside .order .close{
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+/*footer*/
+
+aside footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fafaf9;
+    border-radius: 0 0 20px 0;
+}
+aside footer .cost{
+    border-bottom: 1px solid #eee;
+}
+aside footer .cost > p{
+    display: inline-block;
+    margin: 0px;
+}
+aside footer .cost .total-cost{
+    font-size: 18px;
+    font-weight: bold
+}
+aside footer .final{
+    padding: 10px 0px 20px 20px;
+    font-size: 12px
+}
+aside footer .final .row{
+    padding-right: 0
+}
+aside footer .final .persons{
+    border: 1px solid #000
+}
+aside footer .final .checkout{
+    background: #fcd561;
+    padding: 20px 15px;
+    border-radius: 10px 0 0 10px;
+    font-size: 12px;
+    font-weight: 500
+}
+@media (max-width : 922px){
+    .total .cont main{
+        width: 65%
+    }
+    aside{
+        width: 35%
+    }
+}
+@media (max-width : 576px){
+    .total .cont main{
+        width: 60%
+    }
+    aside{
+        width: 40%
+    }
+    aside footer .final{
+        padding: 10px 0px 10px 10px;
+    }
+}
+/*end aside*/
