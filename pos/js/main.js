@@ -98,24 +98,29 @@ function getMeal(name, price, image) {
                         </div>
                         <div class="col-lg col-2">
                             <div class="card-body text-right mr-1">
-                                <button class="close" type="button">x</button>
+                                <button class="close" id="close" type="button">x</button>
                             </div>
                         </div>
                     </div>
                 </div>`;
     
-    document.getElementById("orders").innerHTML += item;
+    var myOrders = document.getElementById("orders");
+        
+    myOrders.innerHTML += item;
     
     let total = document.getElementById("total").innerText;
     
-    document.getElementById("total").innerHTML = Number(total) + Number(price)
+    document.getElementById("total").innerHTML = Number(total) + Number(price);
+    
+    var myCloseButton = document.getElementsByClassName("close");
+    
+    myCloseButton.onclick = function () {
+        
+        'use strict';
+        
+        this.parentElement.parentElement.parentElement.classList.add("hidden")
+    }  
 }
-
-
-
-
-
-
 
 
 

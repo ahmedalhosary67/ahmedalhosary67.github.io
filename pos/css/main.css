@@ -339,9 +339,6 @@ aside footer .final{
 aside footer .final .row{
     padding-right: 0
 }
-aside footer .final .persons{
-    border: 1px solid #000
-}
 aside footer .final .checkout{
     background: #fcd561;
     padding: 20px 15px;
@@ -369,3 +366,6 @@ aside footer .final .checkout{
     }
 }
 /*end aside*/
+.hidden{
+    display: none
+}
