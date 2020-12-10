@@ -98,11 +98,12 @@ function getMeal(name, price, image) {
                         </div>
                         <div class="col-lg col-2">
                             <div class="card-body text-right mr-1">
-                                <button class="close" id="close" type="button">x</button>
+                                <button class="close" id="close" onclick="removeMeal(event, ${price})" type="button">x</button>
                             </div>
                         </div>
                     </div>
                 </div>`;
+    
     
     var myOrders = document.getElementById("orders");
         
@@ -112,15 +113,20 @@ function getMeal(name, price, image) {
     
     document.getElementById("total").innerHTML = Number(total) + Number(price);
     
-    var myCloseButton = document.getElementsByClassName("close");
-    
-    myCloseButton.onclick = function () {
-        
-        'use strict';
-        
-        this.parentElement.parentElement.parentElement.classList.add("hidden")
-    }  
+
 }
+
+function removeMeal(event, price) {
+    
+    event.target.parentElement.parentElement.parentElement.parentElement.style.display = "none";
+    
+    let total = document.getElementById("total").innerText;
+    
+    document.getElementById("total").innerHTML = Number(total) - Number(price);
+}
+
+
+
 
 
 
