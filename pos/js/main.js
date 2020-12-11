@@ -111,7 +111,7 @@ function getMeal(name, price, image) {
     
     let total = document.getElementById("total").innerText;
     
-    document.getElementById("total").innerHTML = Number(total) + Number(price);
+    document.getElementById("total").innerHTML = (Number(total) + Number(price)).toFixed(2);
     
 
 }
@@ -122,12 +122,32 @@ function removeMeal(event, price) {
     
     let total = document.getElementById("total").innerText;
     
-    document.getElementById("total").innerHTML = Number(total) - Number(price);
+    document.getElementById("total").innerHTML = (Number(total) - Number(price)).toFixed(2);
 }
 
 
 
 
+function plus() {
+    
+    'use strict';
+    
+    let personNo = document.getElementById("personNo").innerText;
+    
+    document.getElementById("personNo").innerHTML = Number(personNo) + 1;
+}
+
+function minus() {
+    
+    'use strict';
+    
+    let personNo = document.getElementById("personNo").innerText;
+    
+    if (Number(personNo) > 0){
+        
+        document.getElementById("personNo").innerHTML = Number(personNo) - 1;
+    }
+}
 
 
 

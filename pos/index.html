@@ -296,10 +296,12 @@
                             <div class="col-lg-5">
                                 <div class="row">
                                     <p class="col-4 col-lg-12">persons</p>
-                                    <div class="persons col-8 col-lg-12 text-center">
-                                        <button type="button">-</button>
-                                        <span class="person-no">0</span>
-                                        <button type="button">+</button>
+                                    <div class="col-8 col-lg-12 text-center">
+                                        <div class="persons">
+                                            <button type="button" class="minus" id="minus" onclick="minus()">-</button>
+                                            <span class="person-no" id="personNo">0</span>
+                                            <button type="button" class="plus" id="plus" onclick="plus()">+</button>
+                                        </div>  
                                     </div>
                                 </div> 
                             </div>
