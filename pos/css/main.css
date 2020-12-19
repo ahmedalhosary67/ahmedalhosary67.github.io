@@ -261,12 +261,11 @@ aside .user-detial{
 aside .user-detial .adress{
     margin-bottom: 20px;
 }
-aside .user-detial a{
+aside .user-detial button{
     float: right;
     color: #fcd561;
-}
-aside .user-detial a:hover{
-    text-decoration: none;
+    background: transparent;
+    border: none
 }
 aside .user-detial i{
     color: #e5ae09;

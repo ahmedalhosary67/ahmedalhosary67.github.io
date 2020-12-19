@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Educational RC</title>
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="./css/main.css">
+    </head>
+    <body>
+        <div class="loader"></div>
+        <div id="container">
+            <main>
+                <header>
+                    <h4>What's in the basket? Choose and write</h4>
+                    <div class="button">
+                        
+                        <img src="./img/resourse_icon.png" alt="resourse_icon" width="50" data-toggle="modal" data-target="#exampleModal">
+                        
+                        <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header border-0">
+                                        <img src="./img/dummy.jpg" alt="" width="100%" class="m-0">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <img src="./img/close_icon.png" width="25px" class="m-0">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <img src="./img/help_icon.png" alt="help" width="50" data-toggle="modal" data-target="#exampleModal1">
+                        
+                        <div class="modal" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header border-0">
+                                        <h5 class="modal-title" id="exampleModalLabel">Help content does here</h5>
+                                        <button type="button" class="close m-0 p-0" data-dismiss="modal" aria-label="Close">
+                                            <img src="./img/close_icon.png" width="25px" class="m-0">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <section>
+                    <div class="container">
+                        <div class="choose-box">
+                            <div class="choose text-center">
+                                <span class="" onclick="choose(event)">scissors</span>
+                                <span class="" onclick="choose(event)">eraser</span>
+                                <span class="" onclick="choose(event)">ruler</span>
+                                <span class="" onclick="choose(event)">bag</span>
+                                <span class="" onclick="choose(event)">pencil case</span>
+                                <span class="" onclick="choose(event)">book</span>
+                                <span class="" onclick="choose(event)">pencil</span>
+                                <span class="" onclick="choose(event)">pen</span>
+                            </div>
+                            <div class="basket">
+                                <img src="./img/basket.png" alt="basket" width="100%" height="100%">
+                                <div class="answers row">
+                                    <div class="col">
+                                        <span class="answer1" onclick="answer(event)"></span>
+                                        <span class="answer2" onclick="answer(event)"></span>
+                                    </div>
+                                    <div class="col">
+                                        <span class="answer3" onclick="answer(event)"></span>
+                                    </div>
+                                    <div class="col">
+                                        <span class="answer4" onclick="answer(event)"></span>
+                                        <span class="answer5" onclick="answer(event)"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <footer>
+                    <img src="./img/replay_icon.png" alt="replay_icon" width="50" onclick="resetValue(event)">
+                    <audio id="correct" src="./img/correct.mp3"></audio>
+                    <audio id="incorrect" src="./img/incorrect.mp3"></audio>
+                    <img src="./img/showAns_icon.png" alt="showAns_icon" width="50" height="45" onclick="seeAnswer(event)">
+                </footer>
+            </main>
+        </div>
+        
+        
+        <!-- [if lt IE 9]>
+            <script src="./js/html5shiv.min.js"></script>
+        <![end if]-->
+        <script src="./js/jquery-3.5.1.min.js"></script>
+        <script src="./js/bootstrap.bundle.min.js"></script>
+        <script src="./js/jquery.min.js"></script>
+        <script src="./js/main.js"></script>
+    </body>
+</html>

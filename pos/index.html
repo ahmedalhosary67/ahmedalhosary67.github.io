@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf=8">
+        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Chukwudi</title>
         <link rel="stylesheet" href="./css/bootstrap.min.css">
@@ -268,12 +268,12 @@
                     <h4 class="my-order-head">My <img src="./img/pngegg.png" alt="" width="20" height="20"> <br> Order</h4>
                     <div class="user-detial p-2 p-sm-3">
                         <div class="adress text">
-                            <span>625 St Mark Ave</span>
-                            <a href="#" class="edit">Edit</a>
+                            <span id="adress">625 St Mark Ave</span>
+                            <button type="button" class="edit" id="edit">Edit</button>
                         </div>
                         <div class="time">
                             <span><i class="fa fa-clock-o"></i> 35 min</span>
-                            <a href="#" class="choose-time">Choose Time</a>
+                            <button type="button" class="choose-time" onclick="changeTime()">Choose Time</button>
                         </div>
                     </div>
                     

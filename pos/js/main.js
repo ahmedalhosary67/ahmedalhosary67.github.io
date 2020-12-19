@@ -2,7 +2,6 @@
 /*jslint plusplus : true, evil : true*/
 
 
-
 $(document).ready(function () {
     'use strict';
     $('.owl-carousel').owlCarousel({
@@ -148,6 +147,62 @@ function minus() {
         document.getElementById("personNo").innerHTML = Number(personNo) - 1;
     }
 }
+
+
+
+
+
+
+
+
+
+
+var adContain = document.querySelector("div.adress"),
+        
+    adress = document.getElementById("adress"),
+    
+    inputAd = document.createElement("input"),
+    
+    editButton = document.getElementById("edit");
+
+inputAd.setAttribute('id', 'inputAdress');
+
+adContain.appendChild(inputAd);
+
+var inputAdress = document.getElementById("inputAdress");
+
+inputAdress.style.display = "none";
+
+editButton.onclick = function () {
+    
+    'use strict';
+
+    inputAdress.style.display = "inline-block";
+
+    adress.style.display = "none";
+
+    document.querySelector("button.edit").textContent = "save";
+    
+    console.log(adress.style.display = "none")
+
+
+//    document.querySelector("button.edit").id = 'save';
+
+    editButton.addEventListener("click", function () {
+
+        'use strict';
+
+        adress.style.display = "inline-block";
+
+        adress.textContent = inputAdress.value;
+
+        inputAdress.style.display = "none";
+
+        document.querySelector("button.edit").textContent = "Edit";
+    })
+}
+
+//var saveButton = document.getElementById('save');
 
 
 

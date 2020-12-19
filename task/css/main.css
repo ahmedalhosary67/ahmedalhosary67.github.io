@@ -1,0 +1,165 @@
+*{
+    -wibkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box
+}
+body{
+    font-family: "myfont"
+}
+
+.loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url(../img/Preloader_2.gif) 50% 50% no-repeat rgb(255,255,255);
+}
+#container{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0
+}
+
+
+
+main{
+    position: absolute;
+    background-color: #333;
+    height: 600px;
+    width: 800px;
+    -webkit-transition: all 500ms ease-in-out !important;
+    left: calc(calc(100vw - 800px) / 2);
+    transform-origin: top center
+}
+
+/* start header */
+
+header{
+    background-color: #fff;
+    height: 15%;
+    padding: 20px;
+    font-weight: 500
+}
+header h4{
+    display: inline-block
+}
+header .button{
+    display: inline-block;
+    float: right
+}
+header .button img{
+    cursor: pointer;
+    margin-left: 10px
+}
+header .modal-dialog{
+    max-width: 680px
+}
+.modal-backdrop {
+    display: none !important;
+}
+header .modal-dialog .close {
+    padding: 0;
+    margin: 0;
+    margin-left: -20px
+}
+header .modal-dialog .modal-content{
+    height: 470px;
+    border: 3px solid #f5821f;
+    overflow: hidden
+}
+
+/* end header */
+
+/* start section */
+
+section{
+    background-color: #0fa0c5;
+    height: 70%;
+    position: relative
+    
+}
+
+section .choose-box{
+    background-color: #fff;
+    border: 3px solid #f5821f;
+    position: absolute;
+    top: -15px;
+    bottom: -15px;
+    left: 20px;
+    right: 20px;
+    border-radius: 20px;
+    overflow: hidden
+}
+section .choose-box .choose{
+    padding: 20px 100px 0;
+    line-height: 1.9
+}
+section .choose-box .choose span {
+    font-size: 32px;
+    font-weight: bold;
+    border: 2px solid #0fa0c5;
+    padding: 0px 10px 7px;
+    margin: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    color: #000
+}
+section .choose-box .choose span.active{
+    background-color: rgb(15, 160, 197);
+    color: #fff
+}
+section .basket .answers span{
+    position: absolute;
+    width: 82%;
+    height: 50px;
+    bottom: 0;
+    left: 20px;
+    z-index: 999;
+    cursor: pointer;
+    font-size: 32px;
+    font-weight: bold;
+    color: #000;
+    padding-left: 20px;
+}
+section .basket .answers .answer1{
+    bottom: 77px;
+}
+section .basket .answers .answer2{
+    bottom: 22px;
+}
+section .basket .answers .answer3{
+    bottom: 22px;
+}
+section .basket .answers .answer4{
+    bottom: 77px;
+}
+section .basket .answers .answer5{
+    bottom: 22px;
+}
+
+/* end section */
+
+/* start footer */
+
+footer{
+    background-color: #deecf6;
+    height: 15%;
+    padding: 30px 20px 0
+}
+footer img{
+    cursor: pointer
+}
+footer img:last-of-type{
+    float: right
+}
+
+/* start footer */
+
+
+
