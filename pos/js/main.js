@@ -2,6 +2,59 @@
 /*jslint plusplus : true, evil : true*/
 
 
+
+window.onresize = changeSize;
+
+window.onload = changeSize;
+
+function changeSize(event) {
+        
+    $(".loader").fadeOut("slow");
+    
+    let newWidth = window.innerWidth;
+    
+    let newHeight = window.innerHeight;
+    
+    let myWidth = document.querySelector(".cont").clientWidth;
+    
+    let myHeight = document.querySelector(".cont").clientHeight
+    
+    
+    
+    if (newWidth <= myWidth) {
+
+        
+        let different = (myWidth - newWidth) / myWidth;
+
+        let scaleValue = `scale(${1 - different})`;
+        
+        document.querySelector(".cont").style.transition = "transform 500ms ease-in-out";
+        
+        document.querySelector(".cont").style.transform = scaleValue;
+        
+        document.querySelector(".cont").style.top = "0px";
+        
+    } else if (newHeight < myHeight) {
+        
+        let different2 = (myHeight - newHeight) / myHeight;
+
+        let scaleValue2 = `scale(${1 - different2})`;
+        
+        document.querySelector(".cont").style.transition = "transform 500ms ease-in-out";
+        
+        document.querySelector(".cont").style.transform = scaleValue2;
+        
+        document.querySelector(".cont").style.top = "0px";
+        
+    }  else {
+        
+        document.querySelector(".cont").style.transform = 'scale(1)';
+    }
+    
+}
+
+
+
 $(document).ready(function () {
     'use strict';
     $('.owl-carousel').owlCarousel({
