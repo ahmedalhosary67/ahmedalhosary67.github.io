@@ -15,27 +15,28 @@
   <div class="collect-parts">
 
 
-    <header class="row">
-      <div class="head col-6 col-md-4">
-        <div class="home">Home</div>
-        <div class="about-us">About Us</div>
-      </div>
+    <header class="head">
+      <!-- <div class="head col-6 col-md-4"> -->
+      <!-- <img src="/image/d1389efb-2c58-4821-b42d-f8e36f30d9e1.jpg" style="position: absolute;left: 0;top: 0;" width="100" height="100" alt=""> -->
+      <div class="home">Home</div>
+      <div class="about-us">About Us</div>
+      <!-- </div> -->
     </header>
 
 
-    <section class="row explain">
-      <div class="col-8 col-md-6">
-        <div class="welcome">
-          <h1>Welcome !</h1>
-        </div>
-        <div class="usage">
-          <p>Use this table to organize your cabinet</p>
-        </div>
+    <section class="explain" style="height: 20%;">
+      <!-- <div class="col-8 col-md-6"> -->
+      <div class="welcome">
+        <h1>Welcome !</h1>
       </div>
+      <div class="usage">
+        <p>Use this table to organize your cabinet</p>
+      </div>
+      <!-- </div> -->
     </section>
 
-    <section class="row cat-table">
-      <div class="main-table col-8 col-md-6">
+    <section class="cat-table" style="height: 40%;">
+      <div class="main-table" style="width:100%">
         <table class="table" id="organizer">
           <thead>
             <tr>
@@ -75,13 +76,9 @@
       </div>
     </section>
 
-    <section class="row export-pdf">
-      <div class="col-8 col-md-6">
-        <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-          Launch demo modal
-        </button> -->
-        <button type="button" data-toggle="modal" data-target="#exampleModal">Export as PDF</button>
-      </div>
+    <section class="export-pdf" style="height: 10%;">
+      <button class="export-pdf-button" type="button" data-toggle="modal" data-target="#exampleModal">Export as
+        PDF</button>
     </section>
 
     <div class="custom-model-main">
@@ -138,11 +135,12 @@
             </button>
           </div>
           <div class="modal-body">
-            
+
           </div>
-          <div class="modal-footer">
+          <div class="modal-footer export-pdf">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary"  data-toggle="modal" data-target="#exampleModal1" data-dismiss="modal" onclick="downloadPdf()">Save changes</button>
+            <button type="button" class="export-pdf-button" data-toggle="modal" data-target="#exampleModal1"
+              data-dismiss="modal" onclick="downloadPdf()">ُExport</button>
           </div>
         </div>
       </div>
