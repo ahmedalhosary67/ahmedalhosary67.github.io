@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/main.css" />
+  <title>Organizing</title>
+</head>
+
+<body>
+
+  <div class="collect-parts">
+
+
+    <header class="row">
+      <div class="head col-6 col-md-4">
+        <div class="home">Home</div>
+        <div class="about-us">About Us</div>
+      </div>
+    </header>
+
+
+    <section class="row explain">
+      <div class="col-8 col-md-6">
+        <div class="welcome">
+          <h1>Welcome !</h1>
+        </div>
+        <div class="usage">
+          <p>Use this table to organize your cabinet</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="row cat-table">
+      <div class="main-table col-8 col-md-6">
+        <table class="table" id="organizer">
+          <thead>
+            <tr>
+              <th scope="col">Not been used</th>
+              <th scope="col">Bad Statue</th>
+              <th scope="col">Good Statue</th>
+              <th scope="col">Category</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="notUsed"><button class="Click-here">+ Item</button></td>
+              <td class="bad"><button class="Click-here">+ Item</button></td>
+              <td class="good"><button class="Click-here">+ Item</button></td>
+              <td>Workware</td>
+            </tr>
+            <tr>
+              <td class="notUsed"><button class="Click-here hideItem">+ Item</button></td>
+              <td class="bad"><button class="Click-here hideItem">+ Item</button></td>
+              <td class="good"><button class="Click-here hideItem">+ Item</button></td>
+              <td>Home</td>
+            </tr>
+            <tr>
+              <td class="notUsed"><button class="Click-here hideItem">+ Item</button></td>
+              <td class="bad"><button class="Click-here hideItem">+ Item</button></td>
+              <td class="good"><button class="Click-here hideItem">+ Item</button></td>
+              <td>Sport</td>
+            </tr>
+            <tr>
+              <td class="notUsed"><button class="Click-here hideItem">+ Item</button></td>
+              <td class="bad"><button class="Click-here hideItem">+ Item</button></td>
+              <td class="good"><button class="Click-here hideItem">+ Item</button></td>
+              <td>Partyware</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="row export-pdf">
+      <div class="col-8 col-md-6">
+        <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+          Launch demo modal
+        </button> -->
+        <button type="button" data-toggle="modal" data-target="#exampleModal">Export as PDF</button>
+      </div>
+    </section>
+
+    <div class="custom-model-main">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-8">
+            <div class="custom-model-inner">
+              <div class="custom-model-wrap">
+                <div class="pop-up-content-wrap">
+                  <div class="items">
+                    <div class="adding row">
+                      <div class="add col-6">Add Item</div>
+                      <div class="close-btn col-6">×</div>
+                    </div>
+                    <form>
+
+                      <div class="input-ele">
+                        <div class="mb-3 row">
+                          <label for="staticEmail" class="col-3 col-form-label">Clothe Name:</label>
+                          <div class="col-8">
+                            <input type="text" class="form-control clotheName" />
+                          </div>
+                        </div>
+                        <div class="mb-3 row">
+                          <label for="inputPassword" class="col-3 col-form-label">Clothe Color:</label>
+                          <div class="col-8">
+                            <input type="text" class="form-control clotheColor" />
+                          </div>
+                        </div>
+                      </div>
+                      <button type="submit" class="btn btn-primary text-center submit">Save</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-overlay"></div>
+    </div>
+
+    <!-- Button trigger modal -->
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">ُExport as pdf</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary"  data-toggle="modal" data-target="#exampleModal1" data-dismiss="modal" onclick="downloadPdf()">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">ُExport as pdf</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            The Exporting Done Successfully
+            <br> please Check Your download
+            <br> Have Fun Organizing
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Done</button>
+            <!-- <button type="button" class="btn btn-primary" onclick="downloadPdf()">Save changes</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <script src="./js/jquery-3.5.1.min.js"></script>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/jquery.min.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.0.10/jspdf.plugin.autotable.min.js"></script>
+  <script src="./js/tableHTMLExport.js"></script>
+</body>
+
+</html>
