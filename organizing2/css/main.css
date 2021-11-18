@@ -5,46 +5,35 @@
   font-family: cursive;
   font-weight: bold;
 }
-body {
+body{
   font-size: 26px !important;
 }
 .collect-parts {
-  /* width: 50vw; */
-  /* height: 100vh; */
+  width: 60vw;
+  height: 100vh;
   margin: 0 auto;
   letter-spacing: -1px;
+  position: relative;
 }
-.loader {
-  position: fixed;
-  left: 0px;
-  top: 0px;
-  width: 100%;
-  height: 100%;
-  z-index: 9999;
-  background: url(../img/Preloader_2.gif) 50% 50% no-repeat rgb(255,255,255);
-}
+
 
 /* Start Header Part  */
 header {
-  /* display: flex; */
+  display: flex;
   align-content: center;
-  justify-content: center;
-  /* margin-bottom: 70px; */
-  height: 20vh;
+  justify-content: space-around;
+  padding: 0 35px;
+  height: 20%;
   /* background-image: url(../image/d1389efb-2c58-4821-b42d-f8e36f30d9e1.jpg); */
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: 25% 40%;
+  /* background-position: 0% 0%; */
   font-size: 28px;
+
 }
 
-header .head {
-  display: flex;
-  justify-content: space-between;
-  /* width: 55%; */
-  /* font-size: 35px; */
-}
 /* End Header Part  */
+
 
 /* Start Welcom! Part  */
 .explain {
@@ -58,7 +47,7 @@ header .head {
 
 .explain .welcome {
   margin-bottom: 25px;
-  color: #b01414;
+  color: #B01414;
   text-align: center;
 }
 
@@ -68,6 +57,7 @@ header .head {
   text-align: center;
 }
 /* End Welcom! Part  */
+
 
 /* Start Table Part  */
 .cat-table {
@@ -93,13 +83,13 @@ header .head {
   margin: 0 auto;
 }
 
-.cat-table .table th:last-of-type,
+.cat-table .table th:last-of-type ,
 .cat-table .table td:last-of-type {
   border-left: 1px solid #000;
-  color: #2349d0;
+  color: #2349D0;
 }
 
-.cat-table .table th,
+.cat-table .table th ,
 .cat-table .table td:last-of-type {
   padding: 15px 0 !important;
 }
@@ -108,21 +98,21 @@ header .head {
   padding: 20px 0;
 }
 
-.cat-table .table th,
+.cat-table .table th ,
 .cat-table .table td {
   padding: 10px 0;
   font-size: 20px;
 }
 
-.cat-table .table thead tr {
-  color: #2349d0;
+.cat-table .table thead tr{
+  color: #2349D0;
 }
 
-.cat-table .table thead,
+.cat-table .table thead ,
 .cat-table .table tbody {
-  color: #e2761a;
+  color: #E2761A;
 }
-.cat-table th button {
+.cat-table .table tbody td button {
   color: #468541;
   background-color: #fff;
   border: 2px solid #468541;
@@ -135,27 +125,28 @@ header .head {
   -o-border-radius: 6px;
 }
 
-.cat-table th button:active {
+.cat-table .table tbody td button:active {
   border-color: #468541;
 }
 
-.cat-table th button:focus {
+.cat-table .table tbody td button:focus {
   border-color: #468541;
   outline: none;
 }
 
-.cat-table th button:focus-visible {
+.cat-table .table tbody td button:focus-visible {
   border-color: #468541;
   outline: none;
 }
 /* End Table Part  */
+
 
 /* Start PDF Button */
 .export-pdf {
   justify-content: center;
 }
 
-.export-pdf button {
+.export-pdf .export-pdf-button {
   margin: 2vw;
   background-color: transparent;
   padding: 12px;
@@ -167,6 +158,7 @@ header .head {
   -o-border-radius: 10px;
 }
 /* Start PDF Button */
+
 
 /* -------- Start Popup ------  */
 .custom-model-main {
@@ -186,7 +178,7 @@ header .head {
   z-index: -1;
   overflow-x: hidden;
   overflow-y: auto;
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
@@ -199,7 +191,6 @@ header .head {
   z-index: 99999;
   opacity: 1;
   overflow: hidden;
-  display: flex;
 }
 
 .custom-model-inner {
@@ -245,6 +236,7 @@ header .head {
   -o-border-radius: 20px;
   /* height: 70vh; */
   /* width: 60vw; */
+
 }
 
 .model-open .custom-model-inner {
@@ -294,10 +286,11 @@ header .head {
   justify-content: center;
   align-items: center;
   margin-bottom: 25px;
+
 }
 
 .items .adding .add {
-  color: #2349d0;
+  color: #2349D0;
   /* font-size: 35px; */
 }
 
@@ -306,8 +299,11 @@ header .head {
   justify-content: flex-start;
 }
 
-.table table .task-box {
-  border-bottom: 2px solid #919191;
-  margin-bottom: 6px;
-  padding-bottom: 6px;
+.hideItem {
+  display: none;
 }
+
+/* .items .input-ele label {
+  font-size: 35px;
+} */
+/* -------- End Popup ------  */
