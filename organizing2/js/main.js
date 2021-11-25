@@ -53,7 +53,7 @@ function addItem(type, event) {
 // Define the function
 // to screenshot the div
 function takeshot() {
-  let div = document.getElementById("table-container");
+  let div = document.getElementById("organizer");
   // Use the html2canvas
   // function to take a screenshot
   // and append it
