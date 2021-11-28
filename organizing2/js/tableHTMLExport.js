@@ -22,11 +22,11 @@ function generate() {
           tableWidth: 'auto',
           fontSize: 15,
         //   overflow: 'linebreak',
-        tableLineColor: [189, 195, 199],
-        tableLineWidth: 0.75,
+        tableLineColor: [222, 226, 230],
+        tableLineWidth: 0.25,
         styles: {
             font: "Meta",
-            lineColor: [233, 236, 239],
+            lineColor: [222, 226, 230],
             lineWidth: 0.25
         },
         headerStyles: {
@@ -91,8 +91,6 @@ function generate() {
         }
     });
     doc.save("table.pdf");
-    // console.log(data);
-    // document.getElementById("output").append(data);
 }
 
 $("#export").click(function (e) {
