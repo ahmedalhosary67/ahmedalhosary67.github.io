@@ -32,9 +32,7 @@ function addItem(type, event) {
   clothName.nextSibling.remove();
 
   if (!clothName.value == "" || !clothColor.value == "") {
-    table.innerHTML += `<span class="task-box">${
-      clothName.value == "" ? "Undefind" : clothName.value
-    } _ ${clothColor.value == "" ? "Undefind" : clothColor.value}</span><br />`;
+    table.innerHTML += `<span class="task-box">${clothName.value} _ ${clothColor.value}</span><br />`;
 
     // if (clothName.value == "") {
     //   clothName.parentNode.innerHTML += `<span class="text text-danger" style="position: absolute;font-size:20px">please insert cloth name</span>`;

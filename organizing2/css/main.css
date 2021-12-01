@@ -28,7 +28,7 @@ body {
     height: 100%;
     z-index: 9999;
     background: url(../image/1.jpg) 50% 20% no-repeat rgb(255, 255, 255);
-    background-size: 100%;
+    background-size: 70%;
 }
 
 
@@ -327,4 +327,18 @@ input:invalid {
 .col-form-label {
     font-size: 25px;
     color: #838383;
+}
+
+
+a.charityLink {
+    display: inline-block;
+    text-decoration: none !important;
+    margin-right: 10px;
+    /* width: fit-content; */
+    border-radius: 50%;
+}
+
+a.charityLink img {
+    border-radius: 50%;
+
 }
