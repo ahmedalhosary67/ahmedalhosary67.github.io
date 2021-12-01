@@ -5,7 +5,8 @@
 $(this).on("keydown click", () => {
   $("#loader").fadeOut("slow");
   $(".welcome").addClass("animate__animated animate__fadeInDownBig");
-  $("table button").addClass("animate__animated animate__zoomIn");
+  $(".usage").addClass("animate__animated animate__fadeInRightBig");
+  $("table").addClass("animate__animated animate__zoomIn");
   $("header img").addClass("animate__animated animate__zoomIn");
   $("section .export-pdf-button").addClass("animate__animated animate__fadeInLeftBig");
 });
@@ -34,15 +35,6 @@ function addItem(type, event) {
   if (!clothName.value == "" || !clothColor.value == "") {
     table.innerHTML += `<span class="task-box">${clothName.value} _ ${clothColor.value}</span><br />`;
 
-    // if (clothName.value == "") {
-    //   clothName.parentNode.innerHTML += `<span class="text text-danger" style="position: absolute;font-size:20px">please insert cloth name</span>`;
-    //   // return;
-    // }
-    // if (clothColor.value == "") {
-    //   clothColor.parentNode.innerHTML += `<span class="text text-danger" style="position: absolute;font-size:20px">please insert cloth color</span>`;
-    // }
-
-    // return;
   }
 
   document.getElementById("modal-wrapper").innerHTML = "";
@@ -59,10 +51,7 @@ function takeshot() {
   $("#output").children().remove();
   setTimeout(() => {
     if ($("#output").parent().parent().parent().hasClass("show")) {
-      // html2canvas(div).then(function (canvas) {
         document.getElementById("output").append(div);
-        console.log(div);
-        // });
       }
       let x = $('#output #example thead th')
         x.each(i => {
@@ -70,28 +59,13 @@ function takeshot() {
     
             } else {
                 x[i].children[1].classList.add('hide')
-                console.log(x[i].children[1].classList);
             }
         })
       
-      // $('table thead th button').each(x => {
-      //     $('table thead th button')[x].classList.remove('hide')
-      // })
   }, 200);
 }
 
 
-function downloadPdf() {
-  var canvas = document.querySelector("canvas");
-  image = canvas
-    .toDataURL("image/png")
-    .replace("image/png", "image/octet-stream");
-  var link = document.createElement("a");
-  link.download = "my-image.png";
-  link.href = image;
-  link.click();
-  // $("#organizer").tableHTMLExport({ type: "pdf", filename: "organizer.pdf" });
-}
 
 function getModal(type) {
   return `<div id="custom-model-main" class="custom-model-main model-open">
