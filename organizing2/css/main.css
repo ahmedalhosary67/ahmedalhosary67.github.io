@@ -13,7 +13,7 @@
 
 body {
     overflow: hidden;
-    /* font-size: 30px ; */
+    /* font-size: 30px ; */ 
 }
 
 .collect-parts {
@@ -331,7 +331,7 @@ input:invalid {
 }
 
 
-a.charityLink {
+.charityLink a {
     display: inline-block;
     text-decoration: none !important;
     margin-right: 10px;
@@ -339,12 +339,28 @@ a.charityLink {
     transition: all .3s ease-in-out;
 }
 
-a.charityLink:hover{
+.charityLink a:hover{
     transform: scale(1.3);
 }
 
-a.charityLink img {
+.charityLink a img {
     border-radius: 50%;
     width: 100px;
     /* height: 50px; */
+}
+
+.ideas ol {
+    margin-left: 30px;
+}
+.ideas a {
+    text-decoration: none !important;
+    font-size: smaller;
+}
+
+.task-box span{
+    cursor: pointer;
+}
+#output .task-box span{
+    cursor: default;
+    pointer-events: none;
 }

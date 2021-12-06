@@ -66,7 +66,9 @@ function generate() {
             }
 
             if (row.index % 5 === 0) {
-                var posY = row.y + row.height * 6 + data.settings.margin.bottom;
+                var posY = row.y + row.height * 2 + data.settings.margin.bottom;
+                console.log(posY);
+                console.log(doc.internal.pageSize.height);
                 if (posY > doc.internal.pageSize.height) {
                     data.addPage();
                 }

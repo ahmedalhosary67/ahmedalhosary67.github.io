@@ -33,7 +33,14 @@ function addItem(type, event) {
   clothName.nextSibling.remove();
 
   if (!clothName.value == "" || !clothColor.value == "") {
-    table.innerHTML += `<span class="task-box">${clothName.value} _ ${clothColor.value}</span><br />`;
+    // table.innerHTML += `<span class="task-box">${clothName.value} _ ${clothColor.value}</span><br />`;
+    table.innerHTML += `<span class="task-box dropright">
+    <span class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> ${clothName.value} _ ${clothColor.value}</span>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="min-width: 0px;">
+      <span class="button text-danger delete fa fa-trash-o mr-2 ml-2" onclick="deleteFunc(this)" id="deleteItem"></span>
+      <span class="button text-dark edit fa fa-pencil-square-o mr-2" onclick="editFunc(this, '${clothName.value}','${clothColor.value}','${clothType.value}','${type}')"></span>
+    </div>
+    <br /></span>`;
 
   }
 
@@ -53,14 +60,10 @@ function takeshot() {
     if ($("#output").parent().parent().parent().hasClass("show")) {
         document.getElementById("output").append(div);
       }
-      let x = $('#output #example thead th')
-        x.each(i => {
-            if (x[i].children[1] == undefined) {
-    
-            } else {
-                x[i].children[1].classList.add('hide')
-            }
-        })
+      let x = $("#output #example button, #output #example .button");
+    x.each((i) => {
+      x[i].classList.add("hide");
+    });
       
   }, 200);
 }
@@ -141,4 +144,24 @@ function getModal(type) {
 </div>
 <div class="bg-overlay"  onclick="closeModal()"></div>
 </div>`;
+}
+
+// delete function
+
+function deleteFunc(elem) {
+  let t = elem.parentNode.parentNode;
+  t.parentNode.removeChild(t);
+}
+
+//  edit function
+
+function editFunc(elem, x, y, z, type) {
+  openModel(type);
+
+  clothName.value = x;
+  clothColor.value = y;
+  clothType.value = z;
+
+  let t = elem.parentNode.parentNode;
+  t.parentNode.removeChild(t);
 }
