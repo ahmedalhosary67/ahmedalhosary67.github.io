@@ -13,12 +13,16 @@
 
 body {
     overflow: hidden;
+    /* background-color: aliceblue; */
     /* font-size: 30px ; */ 
 }
 
 .collect-parts {
     margin: 0 auto;
     position: relative;
+    /* background-color: #fff;
+    height: 100vh;
+    overflow-y: auto; */
 }
 
 #loader {
@@ -28,7 +32,8 @@ body {
     width: 100%;
     height: 100%;
     z-index: 9999;
-    background: url(../image/1.jpg) 50% 20% no-repeat rgb(255, 255, 255);
+    /* background-color: aliceblue; */
+    background: url(../image/1.jpg) 50% 20% no-repeat #fff;
     background-size: 70%;
 }
 
@@ -44,6 +49,7 @@ header {
     /* background-image: url(../image/d1389efb-2c58-4821-b42d-f8e36f30d9e1.jpg); */
     background-size: contain;
     background-repeat: no-repeat;
+    /* background-color: aliceblue; */
     /* background-position: 0% 40%; */
     font-size: 1.7rem;
 }
@@ -88,6 +94,7 @@ table {
     vertical-align: middle;
     text-align: center;
     margin: 0 auto;
+    background-color: #fff;
 }
 
 .cat-table table th {
