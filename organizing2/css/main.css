@@ -39,7 +39,7 @@ body {
     height: 100%;
     z-index: 9999;
     /* background-color: aliceblue; */
-    background: url(../image/1.jpg) 50% 20% no-repeat #fff;
+    background: url(../image/1.1.jpg) 50% 20% no-repeat #fff;
     background-size: 70%;
 }
 
@@ -123,7 +123,7 @@ canvas {
     max-height: 100% !important;
 }
 table tbody th{
-    /* background-color: #eee; */
+    background-color: #eee;
 }
 
 .cat-table table th,
