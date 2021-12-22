@@ -1,57 +1,107 @@
 /*global $, document*/
 /*jslint plusplus : true, evil : true*/
 
+// $('.total').css('height',  (960*74/100)+15+'px');
+// $('.cont').css('height',  (960*74/100)+'px');
+
+// var pageWidth, pageHeight;
+
+// var basePage = {
+//   width: 1280,
+//   height: 960,
+//   scale: 1,
+//   scaleX: 1,
+//   scaleY: 1
+// };
+
+// $(function(){
+//   var $page = $('.total');
+  
+//   getPageSize();
+//   scalePages($page, pageWidth, pageHeight);
+  
+//   //using underscore to delay resize method till finished resizing window
+//   $(window).resize(_.debounce(function () {
+//     getPageSize();            
+//     scalePages($page, pageWidth, pageHeight);
+//   }, 150));
+  
+
+// function getPageSize() {
+//   pageHeight = $('#container').height();
+//   pageWidth = $('#container').width();
+// }
+
+// function scalePages(page, maxWidth, maxHeight) {            
+//   var scaleX = 1, scaleY = 1;                      
+//   scaleX = maxWidth / basePage.width;
+//   scaleY = maxHeight / basePage.height;
+//   basePage.scaleX = scaleX;
+//   basePage.scaleY = scaleY;
+//   basePage.scale = (scaleX > scaleY) ? scaleY : scaleX;
+
+//  // var newLeftPos = Math.abs(Math.floor(((basePage.width * basePage.scale) - maxWidth)/2));
+//  // var newTopPos = Math.abs(Math.floor(((basePage.height * basePage.scale) - maxHeight)/2));
+//  var newLeftPos = Math.abs(Math.floor(((basePage.width * basePage.scale) - maxWidth)/2));
+//   var newTopPos = 0;
+//   page.attr('style', '-webkit-transform:scale(' + basePage.scale + ');left:' + newLeftPos + 'px;top:' + newTopPos + 'px;');
+// }
+// });
+// var mainWidth = document.querySelector(".total").outerWidth,
+
+//     mainHeight = document.querySelector(".total").outerHeight;
 
 
-window.onresize = changeSize;
+    // window.onresize = changeSize;
 
-window.onload = changeSize;
+    // window.onload = changeSize;
+    
+    // function changeSize(event) {
+            
+    //     $(".loader").fadeOut("slow");
+        
+    //     let newWidth = window.innerWidth;
+        
+    //     let newHeight = window.innerHeight;
+        
+    //     let myWidth = document.querySelector(".total").clientWidth;
+        
+    //     let myHeight = document.querySelector(".total").clientHeight
+        
+        
+        
+    //     if (newWidth <= myWidth) {
+    
+            
+    //         let different = (myWidth - newWidth) / myWidth;
+    
+    //         let scaleValue = `scale(${1 - different})`;
+            
+    //         document.querySelector(".total").style.transition = "transform 500ms ease-in-out";
+            
+    //         document.querySelector(".total").style.transform = scaleValue;
+            
+    //         document.querySelector(".total").style.top = "0px";
+            
+    //     } else if (newHeight < myHeight) {
+            
+    //         let different2 = (myHeight - newHeight) / myHeight;
+    
+    //         let scaleValue2 = `scale(${1 - different2})`;
+            
+    //         document.querySelector(".total").style.transition = "transform 500ms ease-in-out";
+            
+    //         document.querySelector(".total").style.transform = scaleValue2;
+            
+    //         document.querySelector(".total").style.top = "0px";
+            
+    //     }  else {
+            
+    //         document.querySelector(".total").style.transform = 'scale(1)';
+    //     }
+        
+    // }
 
-function changeSize(event) {
-        
-    $(".loader").fadeOut("slow");
-    
-    let newWidth = window.innerWidth;
-    
-    let newHeight = window.innerHeight;
-    
-    let myWidth = document.querySelector(".cont").clientWidth;
-    
-    let myHeight = document.querySelector(".cont").clientHeight
-    
-    
-    
-    if (newWidth <= myWidth) {
-
-        
-        let different = (myWidth - newWidth) / myWidth;
-
-        let scaleValue = `scale(${1 - different})`;
-        
-        document.querySelector(".cont").style.transition = "transform 500ms ease-in-out";
-        
-        document.querySelector(".cont").style.transform = scaleValue;
-        
-        document.querySelector(".cont").style.top = "0px";
-        
-    } else if (newHeight < myHeight) {
-        
-        let different2 = (myHeight - newHeight) / myHeight;
-
-        let scaleValue2 = `scale(${1 - different2})`;
-        
-        document.querySelector(".cont").style.transition = "transform 500ms ease-in-out";
-        
-        document.querySelector(".cont").style.transform = scaleValue2;
-        
-        document.querySelector(".cont").style.top = "0px";
-        
-    }  else {
-        
-        document.querySelector(".cont").style.transform = 'scale(1)';
-    }
-    
-}
 
 
 
@@ -128,44 +178,70 @@ $(document).ready(function () {
 //    return num1 + num2
 //}
 
+var myArray = [];
 
-function getMeal(name, price, image) {
+function getMeal(name, price, image, id) {
     
     'use strict';
-    
-    let item = `<div class="card mb-3 mt-3">
-                    <div class="row no-gutters">
-                        <div class="col-lg-4">
-                            <img src=${image} class="card-img" alt="...">
-                        </div>
-                        <div class="col-lg-5 col-6">
-                            <div class="card-body">
-                                <p class="card-text"><span class="amount">1X</span> ${name}</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-4">
-                            <div class="card-body text-right">
-                                <p class="card-text"><small class="text-muted">&#36;${price}</small></p>
-                            </div>
-                        </div>
-                        <div class="col-lg col-2">
-                            <div class="card-body text-right mr-1">
-                                <button class="close" id="close" onclick="removeMeal(event, ${price})" type="button">x</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>`;
-    
-    
-    var myOrders = document.getElementById("orders");
-        
-    myOrders.innerHTML += item;
-    
-    let total = document.getElementById("total").innerText;
-    
-    document.getElementById("total").innerHTML = (Number(total) + Number(price)).toFixed(2);
-    
 
+    if (myArray.indexOf(id) == -1){
+
+        let item = `<div class=" card mb-3 mt-3">
+                        <div class="row no-gutters">
+                            <div class="col-lg-4">
+                                <img src=${image} class="card-img" alt="...">
+                            </div>
+                            <div class="col-lg-5 col-6">
+                                <div class="card-body">
+                                    <p class="card-text"><span type="text" class="amount ${id}">0</span>X ${name}</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-4">
+                                <div class="card-body text-right">
+                                    <p class="card-text"><small class="text-muted">&#36;${price}</small></p>
+                                </div>
+                            </div>
+                            <div class="col-lg col-2">
+                                <div class="card-body text-right mr-1">
+                                    <button class="close" id="close" onclick="removeMeal(event, ${price})" type="button">x</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>`;
+        
+        
+        var myOrders = document.getElementById("orders");
+        
+        myOrders.innerHTML += item;
+
+        myArray.push(id);
+        
+        let total = document.getElementById("total").innerText;
+        
+        document.getElementById("total").innerHTML = (Number(total) + Number(price)).toFixed(2);
+    
+    } else {
+
+        console.log("found");
+
+        let amounts = document.getElementsByClassName("amount");
+
+        for (let amount of amounts) {
+
+            if (amount.classList.contains(id)){
+
+                console.log("ok");
+
+                amount.innerText = Number(amount.innerText) + 1;
+
+                let total = document.getElementById("total").innerText;
+        
+                document.getElementById("total").innerHTML = (Number(total) + Number(price)).toFixed(2);
+
+            }
+        }
+    }
+    
 }
 
 function removeMeal(event, price) {
@@ -182,16 +258,12 @@ function removeMeal(event, price) {
 
 function plus() {
     
-    'use strict';
-    
     let personNo = document.getElementById("personNo").innerText;
     
     document.getElementById("personNo").innerHTML = Number(personNo) + 1;
 }
 
 function minus() {
-    
-    'use strict';
     
     let personNo = document.getElementById("personNo").innerText;
     
@@ -214,49 +286,41 @@ var adContain = document.querySelector("div.adress"),
         
     adress = document.getElementById("adress"),
     
-    inputAd = document.createElement("input"),
-    
     editButton = document.getElementById("edit");
 
-inputAd.setAttribute('id', 'inputAdress');
-
-adContain.appendChild(inputAd);
-
-var inputAdress = document.getElementById("inputAdress");
-
-inputAdress.style.display = "none";
-
 editButton.onclick = function () {
+
+    let yourAdress = prompt("please write your adress");
+
+    if (yourAdress == null || yourAdress == ""){
+
+        adress.textContent = "Unknown";
+    } else {
+
+        adress.textContent = yourAdress;
+    }
+
     
-    'use strict';
-
-    inputAdress.style.display = "inline-block";
-
-    adress.style.display = "none";
-
-    document.querySelector("button.edit").textContent = "save";
     
-    console.log(adress.style.display = "none")
 
-
-//    document.querySelector("button.edit").id = 'save';
-
-    editButton.addEventListener("click", function () {
-
-        'use strict';
-
-        adress.style.display = "inline-block";
-
-        adress.textContent = inputAdress.value;
-
-        inputAdress.style.display = "none";
-
-        document.querySelector("button.edit").textContent = "Edit";
-    })
 }
 
-//var saveButton = document.getElementById('save');
+function changeTime() {
+
+    let time = prompt("please enter time that you need");
+
+    if (time == null || time == ""){
+
+        document.querySelector(".time .time-number").textContent = "Unknown";
+    } else {
+
+        document.querySelector(".time .time-number").textContent = time;
+    }
+}
 
 
 
+$(".cont main nav .menu button").click(function() {
+        $("aside").toggle(400);
+    })
 

@@ -8,16 +8,22 @@
     box-sizing: border-box;
     perspective: 800px;
 }
-body {
-    
-}
+/* main{
+    position: absolute;
+    background-color: #333;
+    height: 600px;
+    width: 800px;
+    -webkit-transition: all 500ms ease-in-out !important;
+    left: calc(calc(100vw - 800px) / 2);
+    transform-origin: top center
+} */
 .total {
     width: 100vw;
     height: 100vh;
     background-image: -webkit-linear-gradient( #fcd561 0%, #f6c357 100%);
     background-image: linear-gradient( #fcd561 0%, #f6c357 100%);
-    position: relative;
-    z-index: 1
+    position: absolute;
+    z-index: 1;
 }
 .total .dicoration1{
     width: 1%;
@@ -121,7 +127,7 @@ body {
     color: #fff;
     padding: 10px 15px;
     border-radius: 20px;
-    font-size: 12px
+    font-size: 12px;
 }
 .total .restaurant form span{
     margin-right: 5px;
@@ -203,6 +209,11 @@ body {
     border-radius: 10px;
     background: #eee;
 }
+@media (min-width: 1200px){
+    .meals{
+        height: 60%;
+    }
+}
 @media (min-width: 768px){
     .meals .card img{
         height: 130px;
@@ -238,6 +249,7 @@ aside{
     background-color: #fafaf9;
     border-radius: 0px 20px 20px 0px;
 }
+
 aside .user span{
     background: #fcd561;
     color: #000;
@@ -292,6 +304,12 @@ aside .order .card-img{
 }
 aside .order .card-body{
     padding: 0;
+}
+aside .order .card-body .amount{
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: none;
 }
 aside .order .card-body .card-text{
     font-size: 12px;
@@ -355,26 +373,64 @@ aside footer .final .checkout{
     font-weight: 500;
     cursor: pointer
 }
+@media (min-width: 1200px){
+    aside .order{
+        max-height: 60%;
+    }
+}
 @media (max-width : 922px){
-    .total .cont main{
+    /* .total .cont main{
         width: 65%
     }
     aside{
         width: 35%
-    }
+    } */
 }
 @media (max-width : 576px){
-    .total .cont main{
+    /* .total .cont main{
         width: 60%
+    } */
+    /* aside{
+        width: 40%
+    } */
+    /* aside footer .final{
+        padding: 10px 0px 10px 10px;
+    } */
+}
+/*end aside*/
+@media (max-width: 576px){
+    .total .cont main{
+        width: 100%;
     }
     aside{
-        width: 40%
+        position: absolute;
+        right: 0;
+        top: 50px;
+        height: 93%;
+        display: none;
+        z-index: 9999;
+        width: 100%;
+        border-radius: 20px;
+        padding: 80px!important;
+    }
+    aside footer{
+        border-radius: 20px!important;
+        
     }
     aside footer .final{
         padding: 10px 0px 10px 10px;
     }
+    aside footer .checkout{
+        border-radius: 20px!important;
+        text-align: center;
+    }
+    .total .restaurant h2{
+        font-size: 23px;
+    }
+    .total .restaurant form{
+        font-size: 10px
+    }
 }
-/*end aside*/
 .hidden{
     display: none
 }
