@@ -184,24 +184,26 @@ function getMeal(name, price, image, id) {
     
     'use strict';
 
+    console.log();
+
     if (myArray.indexOf(id) == -1){
 
         let item = `<div class=" card mb-3 mt-3">
                         <div class="row no-gutters">
-                            <div class="col-lg-4">
+                            <div class="col-lg-4 col">
                                 <img src=${image} class="card-img" alt="...">
                             </div>
-                            <div class="col-lg-5 col-6">
+                            <div class="col-lg-5 col">
                                 <div class="card-body">
                                     <p class="card-text"><span type="text" class="amount ${id}">0</span>X ${name}</p>
                                 </div>
                             </div>
-                            <div class="col-lg-2 col-4">
+                            <div class="col-lg-2 col">
                                 <div class="card-body text-right">
                                     <p class="card-text"><small class="text-muted">&#36;${price}</small></p>
                                 </div>
                             </div>
-                            <div class="col-lg col-2">
+                            <div class="col-lg col-1">
                                 <div class="card-body text-right mr-1">
                                     <button class="close" id="close" onclick="removeMeal(event, ${price})" type="button">x</button>
                                 </div>
@@ -246,7 +248,7 @@ function getMeal(name, price, image, id) {
 
 function removeMeal(event, price) {
     
-    event.target.parentElement.parentElement.parentElement.parentElement.style.display = "none";
+    event.target.parentElement.parentElement.parentElement.parentElement.remove();
     
     let total = document.getElementById("total").innerText;
     
@@ -321,6 +323,7 @@ function changeTime() {
 
 
 $(".cont main nav .menu button").click(function() {
-        $("aside").toggle(400);
+        $("aside").toggle();
+        // $('main').css("width", "100%")
     })
 

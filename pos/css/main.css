@@ -73,11 +73,12 @@
     top: 2.5%;
     left: 2.5%;
     border-radius: 30px;
+    display: flex;
 }
 
 .total .cont main{
-    float: left;
-    width: 75%;
+    /* float: left; */
+    /* width: 75%; */
     height: 100%;
     border-radius: 0px 20px 20px 0px;
     /*padding: 30px 60px;*/
@@ -243,11 +244,12 @@
 
 /*start aside*/
 aside{
-    float: right;
-    width: 25%;
+    /* float: right; */
+    width: 50%;
     height: 100%;
     background-color: #fafaf9;
     border-radius: 0px 20px 20px 0px;
+    display: none;
 }
 
 aside .user span{
@@ -381,10 +383,10 @@ aside footer .final .checkout{
 @media (max-width : 922px){
     /* .total .cont main{
         width: 65%
-    }
-    aside{
-        width: 35%
     } */
+    aside{
+        width: 100%
+    }
 }
 @media (max-width : 576px){
     /* .total .cont main{
@@ -398,7 +400,7 @@ aside footer .final .checkout{
     } */
 }
 /*end aside*/
-@media (max-width: 576px){
+@media (max-width: 667px){
     .total .cont main{
         width: 100%;
     }

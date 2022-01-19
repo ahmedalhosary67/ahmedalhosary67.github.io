@@ -7,7 +7,7 @@ window.onresize = changeSize;
 window.onload = changeSize;
 
 function changeSize(event) {
-    
+        
     $(".loader").fadeOut("slow");
     
     let newWidth = window.innerWidth;
