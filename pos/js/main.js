@@ -160,10 +160,11 @@ $(document).ready(function () {
 
 var myArray = [];
 var myOrders = document.getElementById("orders");
-var total = document.getElementById("total").innerText;
+var total = document.getElementById("total");
+
 function getMeal(name, price, image, id) {
-  
-  if (myArray.indexOf(id) == -1) {
+  let idnew = id + 1;
+  if (myArray.indexOf(idnew) == -1) {
     let item = `<div class=" card mb-3 mt-3">
                         <div class="row no-gutters">
                             <div class="col-lg-4 col">
@@ -171,19 +172,22 @@ function getMeal(name, price, image, id) {
                             </div>
                             <div class="col-lg-5 col">
                                 <div class="card-body">
-                                    <p class="card-text"><span type="text" class="amount" id="${id + 1}">1</span>X ${name}</p>
+                                    <p class="card-text">
+                                    <span type="text" class="amount" id="${idnew}">1</span>X ${name}
+                                    </p>
                                 </div>
                             </div>
                             <div class="col-lg-2 col">
                                 <div class="card-body text-right">
-                                    <p class="card-text"><small class="text-muted">&#36;${price}</small></p>
+                                    <p class="card-text">
+                                    <small class="text-muted">&#36;${price}</small>
+                                    </p>
                                 </div>
                             </div>
                             <div class="col-lg col-1">
                                 <div class="card-body text-right mr-1">
-                                    <button class="close" id="close" onclick="removeMeal(event, ${price}, ${
-      id + 1
-    })" type="button">x</button>
+                                    <button class="close" id="close" 
+                                    onclick="removeMeal(event, ${price}, ${idnew})" type="button">x</button>
                                 </div>
                             </div>
                         </div>
@@ -191,29 +195,26 @@ function getMeal(name, price, image, id) {
 
     myOrders.innerHTML += item;
 
-    myArray.push(id);
+    myArray.push(idnew);
+    console.log(myArray);
 
-    document.getElementById("total").innerHTML = (
-      Number(total) + Number(price)
-    ).toFixed(2);
+    total.innerHTML = (Number(total.innerHTML) + Number(price)).toFixed(2);
   } else {
     let amount = document.getElementById(id + 1);
     amount.innerText = Number(amount.innerText) + 1;
-    document.getElementById("total").innerHTML = (
-      Number(total) + Number(price)
-    ).toFixed(2);
+    total.innerHTML = (Number(total.innerHTML) + Number(price)).toFixed(2);
   }
 }
 
 function removeMeal(event, price, id) {
   event.target.parentElement.parentElement.parentElement.parentElement.remove();
 
-//   myArray = [];
-console.log(myArray[id - 1]);
-  
+  //   myArray = [];
+  myArray = myArray.filter((item) => item !== id.getAttribute("id"));
+  console.log(myArray);
 
-  document.getElementById("total").innerHTML = (
-    Number(total) -
+  total.innerHTML = (
+    Number(total.innerText) -
     Number(price) * Number(id.innerText)
   ).toFixed(2);
 }
@@ -256,10 +257,7 @@ function changeTime() {
   }
 }
 
-
-
-$(".cont main nav .menu button").click(function() {
-        $("aside").toggle();
-        // $('main').css("width", "100%")
-    })
-
+$(".cont main nav .menu button").click(function () {
+  $("aside").toggle();
+  // $('main').css("width", "100%")
+});
