@@ -770,11 +770,7 @@ body {
 .gallery {
   padding: 100px 60px;
 }
-@media (max-width: 992px) {
-  /* .gallery {
-    margin-left: 100px;
-  } */
-}
+
 .gallery .header-gallery {
   margin-bottom: 100px;
 }
@@ -812,6 +808,7 @@ body {
   grid-template-rows: repeat(4, 1fr);
   gap: 10px;
 }
+
 .gallery .item1 {
   grid-column: span 2;
   grid-row: span 4;
@@ -881,7 +878,7 @@ body {
 .gallery .text {
   color: white;
   font-size: 20px;
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);

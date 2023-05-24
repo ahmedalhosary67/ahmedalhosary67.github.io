@@ -16,23 +16,24 @@
 
 // $(function(){
 //   var $page = $('.total');
-
+  
 //   getPageSize();
 //   scalePages($page, pageWidth, pageHeight);
-
+  
 //   //using underscore to delay resize method till finished resizing window
 //   $(window).resize(_.debounce(function () {
-//     getPageSize();
+//     getPageSize();            
 //     scalePages($page, pageWidth, pageHeight);
 //   }, 150));
+  
 
 // function getPageSize() {
 //   pageHeight = $('#container').height();
 //   pageWidth = $('#container').width();
 // }
 
-// function scalePages(page, maxWidth, maxHeight) {
-//   var scaleX = 1, scaleY = 1;
+// function scalePages(page, maxWidth, maxHeight) {            
+//   var scaleX = 1, scaleY = 1;                      
 //   scaleX = maxWidth / basePage.width;
 //   scaleY = maxHeight / basePage.height;
 //   basePage.scaleX = scaleX;
@@ -50,104 +51,123 @@
 
 //     mainHeight = document.querySelector(".total").outerHeight;
 
-// window.onresize = changeSize;
 
-// window.onload = changeSize;
+    // window.onresize = changeSize;
 
-// function changeSize(event) {
+    // window.onload = changeSize;
+    
+    // function changeSize(event) {
+            
+    //     $(".loader").fadeOut("slow");
+        
+    //     let newWidth = window.innerWidth;
+        
+    //     let newHeight = window.innerHeight;
+        
+    //     let myWidth = document.querySelector(".total").clientWidth;
+        
+    //     let myHeight = document.querySelector(".total").clientHeight
+        
+        
+        
+    //     if (newWidth <= myWidth) {
+    
+            
+    //         let different = (myWidth - newWidth) / myWidth;
+    
+    //         let scaleValue = `scale(${1 - different})`;
+            
+    //         document.querySelector(".total").style.transition = "transform 500ms ease-in-out";
+            
+    //         document.querySelector(".total").style.transform = scaleValue;
+            
+    //         document.querySelector(".total").style.top = "0px";
+            
+    //     } else if (newHeight < myHeight) {
+            
+    //         let different2 = (myHeight - newHeight) / myHeight;
+    
+    //         let scaleValue2 = `scale(${1 - different2})`;
+            
+    //         document.querySelector(".total").style.transition = "transform 500ms ease-in-out";
+            
+    //         document.querySelector(".total").style.transform = scaleValue2;
+            
+    //         document.querySelector(".total").style.top = "0px";
+            
+    //     }  else {
+            
+    //         document.querySelector(".total").style.transform = 'scale(1)';
+    //     }
+        
+    // }
 
-//     $(".loader").fadeOut("slow");
 
-//     let newWidth = window.innerWidth;
 
-//     let newHeight = window.innerHeight;
-
-//     let myWidth = document.querySelector(".total").clientWidth;
-
-//     let myHeight = document.querySelector(".total").clientHeight
-
-//     if (newWidth <= myWidth) {
-
-//         let different = (myWidth - newWidth) / myWidth;
-
-//         let scaleValue = `scale(${1 - different})`;
-
-//         document.querySelector(".total").style.transition = "transform 500ms ease-in-out";
-
-//         document.querySelector(".total").style.transform = scaleValue;
-
-//         document.querySelector(".total").style.top = "0px";
-
-//     } else if (newHeight < myHeight) {
-
-//         let different2 = (myHeight - newHeight) / myHeight;
-
-//         let scaleValue2 = `scale(${1 - different2})`;
-
-//         document.querySelector(".total").style.transition = "transform 500ms ease-in-out";
-
-//         document.querySelector(".total").style.transform = scaleValue2;
-
-//         document.querySelector(".total").style.top = "0px";
-
-//     }  else {
-
-//         document.querySelector(".total").style.transform = 'scale(1)';
-//     }
-
-// }
 
 $(document).ready(function () {
-  "use strict";
-  $(".owl-carousel").owlCarousel({
-    margin: 20,
-    nav: true,
-    dots: false,
-    responsive: {
-      0: {
-        items: 3,
-      },
-      576: {
-        items: 4,
-      },
-      900: {
-        items: 6,
-      },
-      1000: {
-        items: 8,
-      },
-    },
-  });
-
-  $(".type-of-meal a").on("click", function () {
-    $(".meals .col").fadeOut();
-
-    $("*").removeClass("active-card");
-
-    $(this).parent().addClass("active-card");
-  });
-
-  $(".type-of-meal .active-card a").on("click", function () {
-    $(".meals .col").fadeIn();
-  });
-
-  $(".type-of-meal .1 a").on("click", function () {
-    $(".meals .1").fadeIn();
-  });
-
-  $(".type-of-meal .2 a").on("click", function () {
-    $(".meals .2").fadeIn();
-  });
-
-  $(".type-of-meal .3 a").on("click", function () {
-    $(".meals .3").fadeIn();
-  });
-  $(".type-of-meal .4 a").on("click", function () {
-    $(".meals .4").fadeIn();
-  });
+    'use strict';
+    $('.owl-carousel').owlCarousel({
+        margin: 20,
+        nav: true,
+        dots: false,
+        responsive: {
+            0: {
+                items: 3
+            },
+            576: {
+                items: 4
+            },
+            900: {
+                items: 6
+            },
+            1000: {
+                items: 8
+            }
+        }
+    });
+    
+    $(".type-of-meal a").on("click", function () {
+        
+        $(".meals .col").fadeOut();
+        
+        $("*").removeClass("active-card");
+        
+        $(this).parent().addClass("active-card");
+    });
+    
+    $(".type-of-meal .active-card a").on("click", function () {
+        
+        $(".meals .col").fadeIn();
+    });
+    
+    $(".type-of-meal .1 a").on("click", function () {
+        
+        $(".meals .1").fadeIn();
+    });
+    
+    $(".type-of-meal .2 a").on("click", function () {
+        
+        $(".meals .2").fadeIn();
+    });
+    
+    $(".type-of-meal .3 a").on("click", function () {
+        
+        $(".meals .3").fadeIn();
+    });
+    $(".type-of-meal .4 a").on("click", function () {
+        
+        $(".meals .4").fadeIn();
+    });
+    
 });
 
+
 // pure javascript functions
+
+
+
+
 
 //
 //function fullname(first, last) {
@@ -159,105 +179,148 @@ $(document).ready(function () {
 //}
 
 var myArray = [];
-var myOrders = document.getElementById("orders");
-var total = document.getElementById("total");
 
 function getMeal(name, price, image, id) {
-  let idnew = id + 1;
-  if (myArray.indexOf(idnew) == -1) {
-    let item = `<div class=" card mb-3 mt-3">
+    
+    'use strict';
+
+    if (myArray.indexOf(id) == -1){
+
+        let item = `<div class=" card mb-3 mt-3">
                         <div class="row no-gutters">
-                            <div class="col-lg-4 col">
+                            <div class="col-lg-4">
                                 <img src=${image} class="card-img" alt="...">
                             </div>
-                            <div class="col-lg-5 col">
+                            <div class="col-lg-5 col-6">
                                 <div class="card-body">
-                                    <p class="card-text">
-                                    <span type="text" class="amount" id="${idnew}">1</span>X ${name}
-                                    </p>
+                                    <p class="card-text"><span type="text" class="amount ${id}">0</span>X ${name}</p>
                                 </div>
                             </div>
-                            <div class="col-lg-2 col">
+                            <div class="col-lg-2 col-4">
                                 <div class="card-body text-right">
-                                    <p class="card-text">
-                                    <small class="text-muted">&#36;${price}</small>
-                                    </p>
+                                    <p class="card-text"><small class="text-muted">&#36;${price}</small></p>
                                 </div>
                             </div>
-                            <div class="col-lg col-1">
+                            <div class="col-lg col-2">
                                 <div class="card-body text-right mr-1">
-                                    <button class="close" id="close" 
-                                    onclick="removeMeal(event, ${price}, ${idnew})" type="button">x</button>
+                                    <button class="close" id="close" onclick="removeMeal(event, ${price})" type="button">x</button>
                                 </div>
                             </div>
                         </div>
                     </div>`;
+        
+        
+        var myOrders = document.getElementById("orders");
+        
+        myOrders.innerHTML += item;
 
-    myOrders.innerHTML += item;
+        myArray.push(id);
+        
+        let total = document.getElementById("total").innerText;
+        
+        document.getElementById("total").innerHTML = (Number(total) + Number(price)).toFixed(2);
+    
+    } else {
 
-    myArray.push(idnew);
-    console.log(myArray);
+        console.log("found");
 
-    total.innerHTML = (Number(total.innerHTML) + Number(price)).toFixed(2);
-  } else {
-    let amount = document.getElementById(id + 1);
-    amount.innerText = Number(amount.innerText) + 1;
-    total.innerHTML = (Number(total.innerHTML) + Number(price)).toFixed(2);
-  }
+        let amounts = document.getElementsByClassName("amount");
+
+        for (let amount of amounts) {
+
+            if (amount.classList.contains(id)){
+
+                console.log("ok");
+
+                amount.innerText = Number(amount.innerText) + 1;
+
+                let total = document.getElementById("total").innerText;
+        
+                document.getElementById("total").innerHTML = (Number(total) + Number(price)).toFixed(2);
+
+            }
+        }
+    }
+    
 }
 
-function removeMeal(event, price, id) {
-  event.target.parentElement.parentElement.parentElement.parentElement.remove();
-
-  //   myArray = [];
-  myArray = myArray.filter((item) => item !== id.getAttribute("id"));
-  console.log(myArray);
-
-  total.innerHTML = (
-    Number(total.innerText) -
-    Number(price) * Number(id.innerText)
-  ).toFixed(2);
+function removeMeal(event, price) {
+    
+    event.target.parentElement.parentElement.parentElement.parentElement.style.display = "none";
+    
+    let total = document.getElementById("total").innerText;
+    
+    document.getElementById("total").innerHTML = (Number(total) - Number(price)).toFixed(2);
 }
+
+
+
 
 function plus() {
-  let personNo = document.getElementById("personNo").innerText;
-
-  document.getElementById("personNo").innerHTML = Number(personNo) + 1;
+    
+    let personNo = document.getElementById("personNo").innerText;
+    
+    document.getElementById("personNo").innerHTML = Number(personNo) + 1;
 }
 
 function minus() {
-  let personNo = document.getElementById("personNo").innerText;
-
-  if (Number(personNo) > 0) {
-    document.getElementById("personNo").innerHTML = Number(personNo) - 1;
-  }
+    
+    let personNo = document.getElementById("personNo").innerText;
+    
+    if (Number(personNo) > 0){
+        
+        document.getElementById("personNo").innerHTML = Number(personNo) - 1;
+    }
 }
+
+
+
+
+
+
+
+
+
 
 var adContain = document.querySelector("div.adress"),
-  adress = document.getElementById("adress"),
-  editButton = document.getElementById("edit");
+        
+    adress = document.getElementById("adress"),
+    
+    editButton = document.getElementById("edit");
 
 editButton.onclick = function () {
-  let yourAdress = prompt("please write your adress");
 
-  if (yourAdress == null || yourAdress == "") {
-    adress.textContent = "Unknown";
-  } else {
-    adress.textContent = yourAdress;
-  }
-};
+    let yourAdress = prompt("please write your adress");
 
-function changeTime() {
-  let time = prompt("please enter time that you need");
+    if (yourAdress == null || yourAdress == ""){
 
-  if (time == null || time == "") {
-    document.querySelector(".time .time-number").textContent = "Unknown";
-  } else {
-    document.querySelector(".time .time-number").textContent = time;
-  }
+        adress.textContent = "Unknown";
+    } else {
+
+        adress.textContent = yourAdress;
+    }
+
+    
+    
+
 }
 
-$(".cont main nav .menu button").click(function () {
-  $("aside").toggle();
-  // $('main').css("width", "100%")
-});
+function changeTime() {
+
+    let time = prompt("please enter time that you need");
+
+    if (time == null || time == ""){
+
+        document.querySelector(".time .time-number").textContent = "Unknown";
+    } else {
+
+        document.querySelector(".time .time-number").textContent = time;
+    }
+}
+
+
+
+$(".cont main nav .menu button").click(function() {
+        $("aside").toggle(400);
+    })
+
